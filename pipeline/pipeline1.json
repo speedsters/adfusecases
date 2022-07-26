@@ -135,7 +135,7 @@
 				"typeProperties": {
 					"variableName": "ErrorDetails",
 					"value": {
-						"value": "@activity('Copy data1').Error",
+						"value": "@activity('Lookup1').Error.message",
 						"type": "Expression"
 					}
 				}
@@ -196,7 +196,35 @@
 						"type": "AzureSqlSource",
 						"sqlReaderStoredProcedureName": "[dbo].[usp_insertlogdetails]",
 						"storedProcedureParameters": {
+							"activityname": {
+								"type": "String",
+								"value": {
+									"value": "@variables('ErrorDetails')",
+									"type": "Expression"
+								}
+							},
+							"activitytype": {
+								"type": "String",
+								"value": {
+									"value": "@variables('ErrorDetails').Type",
+									"type": "Expression"
+								}
+							},
+							"errorcode": {
+								"type": "String",
+								"value": {
+									"value": "@variables('ErrorDetails').ErrorCode",
+									"type": "Expression"
+								}
+							},
 							"errormessage": {
+								"type": "String",
+								"value": {
+									"value": "@variables('ErrorDetails')",
+									"type": "Expression"
+								}
+							},
+							"failuretype": {
 								"type": "String",
 								"value": {
 									"value": "@variables('ErrorDetails')",

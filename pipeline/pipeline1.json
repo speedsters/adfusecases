@@ -61,7 +61,17 @@
 								"secureOutput": false,
 								"secureInput": false
 							},
-							"userProperties": [],
+							"userProperties": [
+								null,
+								{
+									"name": "Source",
+									"value": "newcontainer//cars.csv"
+								},
+								{
+									"name": "Destination",
+									"value": "."
+								}
+							],
 							"typeProperties": {
 								"source": {
 									"type": "DelimitedTextSource",

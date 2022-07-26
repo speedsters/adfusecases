@@ -206,7 +206,7 @@
 							"activitytype": {
 								"type": "String",
 								"value": {
-									"value": "@variables('ErrorDetails').Type",
+									"value": "@variables('ErrorDetails')",
 									"type": "Expression"
 								}
 							},

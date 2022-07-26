@@ -133,9 +133,9 @@
 				],
 				"userProperties": [],
 				"typeProperties": {
-					"variableName": "activityName",
+					"variableName": "activityType",
 					"value": {
-						"value": "@activity('Lookup1').activityName",
+						"value": "@activity('Lookup1').ActivityType",
 						"type": "Expression"
 					}
 				}

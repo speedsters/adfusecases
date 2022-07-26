@@ -78,6 +78,7 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
+						"sqlReaderQuery": "Select * from NOTAbleNAme",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
@@ -132,6 +133,31 @@
 					"value": {
 						"value": "@activity('Copy data1').Error.Message",
 						"type": "Expression"
+					}
+				}
+			},
+			{
+				"name": "Lookup2",
+				"type": "Lookup",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "AzureSqlSource",
+						"sqlReaderQuery": "select isnull(max(sno),0),max(sno)+1 as maxno from t_adf_errorlog",
+						"queryTimeout": "02:00:00",
+						"partitionOption": "None"
+					},
+					"dataset": {
+						"referenceName": "AzureSqlTable1",
+						"type": "DatasetReference"
 					}
 				}
 			}

@@ -213,7 +213,7 @@
 							"errorcode": {
 								"type": "String",
 								"value": {
-									"value": "@variables('ErrorDetails')",
+									"value": "@variables('ErrorDetails').Error.ErrorCode",
 									"type": "Expression"
 								}
 							},
@@ -227,7 +227,7 @@
 							"failuretype": {
 								"type": "String",
 								"value": {
-									"value": "@variables('ErrorDetails')",
+									"value": "@variables('ErrorDetails').Error.ErrorCode",
 									"type": "Expression"
 								}
 							},

@@ -133,9 +133,9 @@
 				],
 				"userProperties": [],
 				"typeProperties": {
-					"variableName": "Code",
+					"variableName": "ErrorDetails",
 					"value": {
-						"value": "@activity('Lookup1').Error.ErrorCode",
+						"value": "@activity('Lookup1').Error.Message",
 						"type": "Expression"
 					}
 				}

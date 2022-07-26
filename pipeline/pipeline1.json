@@ -133,7 +133,7 @@
 				],
 				"userProperties": [],
 				"typeProperties": {
-					"variableName": "ErrorDetails",
+					"variableName": "ErrorArray",
 					"value": {
 						"value": "@activity('Lookup1').Error.Message",
 						"type": "Expression"
@@ -271,6 +271,9 @@
 			},
 			"Code": {
 				"type": "String"
+			},
+			"ErrorArray": {
+				"type": "Array"
 			}
 		},
 		"annotations": []

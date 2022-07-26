@@ -33,7 +33,7 @@
 						"tableOption": "autoCreate",
 						"disableMetricsCollection": false
 					},
-					"enableStaging": true,
+					"enableStaging": false,
 					"translator": {
 						"type": "TabularTranslator",
 						"typeConversion": true,

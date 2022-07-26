@@ -199,14 +199,14 @@
 							"activityname": {
 								"type": "String",
 								"value": {
-									"value": "@variables('ErrorDetails')",
+									"value": "@variables('activityName')",
 									"type": "Expression"
 								}
 							},
 							"activitytype": {
 								"type": "String",
 								"value": {
-									"value": "@variables('ErrorDetails')",
+									"value": "@variables('activityType')",
 									"type": "Expression"
 								}
 							},

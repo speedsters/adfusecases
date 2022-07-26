@@ -62,7 +62,6 @@
 								"secureInput": false
 							},
 							"userProperties": [
-								null,
 								{
 									"name": "Source",
 									"value": "newcontainer//cars.csv"
@@ -77,7 +76,7 @@
 									"type": "DelimitedTextSource",
 									"storeSettings": {
 										"type": "AzureBlobStorageReadSettings",
-										"recursive": true,
+										"recursive": false,
 										"enablePartitionDiscovery": false
 									},
 									"formatSettings": {
@@ -87,21 +86,14 @@
 								"sink": {
 									"type": "AzureSqlSink",
 									"writeBehavior": "insert",
-									"sqlWriterUseTableLock": false,
-									"tableOption": {
-										"value": "@{activity('List').output.value}",
-										"type": "Expression"
-									},
+									"sqlWriterUseTableLock": true,
+									"tableOption": "autoCreate",
 									"disableMetricsCollection": false
 								},
 								"enableStaging": false,
 								"translator": {
-									"type": "TabularTranslator",
-									"typeConversion": true,
-									"typeConversionSettings": {
-										"allowDataTruncation": true,
-										"treatBooleanAsNumber": false
-									}
+									"value": "@item()",
+									"type": "Expression"
 								}
 							},
 							"inputs": [

@@ -133,9 +133,9 @@
 				],
 				"userProperties": [],
 				"typeProperties": {
-					"variableName": "ErrorDetails",
+					"variableName": "ErrorCode",
 					"value": {
-						"value": "@activity('Lookup1').Error.Message",
+						"value": "@activity('Lookup1').Error.Code",
 						"type": "Expression"
 					}
 				}
@@ -264,6 +264,9 @@
 				"type": "String"
 			},
 			"activityName": {
+				"type": "String"
+			},
+			"ErrorCode": {
 				"type": "String"
 			}
 		},

@@ -114,8 +114,33 @@
 					},
 					"fieldList": []
 				}
+			},
+			{
+				"name": "Set variable1",
+				"type": "SetVariable",
+				"dependsOn": [
+					{
+						"activity": "Lookup1",
+						"dependencyConditions": [
+							"Failed"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "ErrorDetails",
+					"value": {
+						"value": "@activity('Copy data1').Error.Message",
+						"type": "Expression"
+					}
+				}
 			}
 		],
+		"variables": {
+			"ErrorDetails": {
+				"type": "String"
+			}
+		},
 		"annotations": []
 	}
 }

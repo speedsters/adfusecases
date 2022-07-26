@@ -241,7 +241,7 @@
 							"sno": {
 								"type": "Int32",
 								"value": {
-									"value": "@activity('Lookup2').output.maxno",
+									"value": "@activity('Lookup2').output.firstRow.maxno",
 									"type": "Expression"
 								}
 							}

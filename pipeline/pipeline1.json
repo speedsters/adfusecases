@@ -149,7 +149,8 @@
 					"dataset": {
 						"referenceName": "AzureSqlTable1",
 						"type": "DatasetReference"
-					}
+					},
+					"firstRowOnly": false
 				}
 			},
 			{
@@ -207,7 +208,7 @@
 							"failuretype": {
 								"type": "String",
 								"value": {
-									"value": "@concat(activity('Failed Lookup').error.message, 'failureType', activity('Failed Lookup').error.failureType)",
+									"value": "@concat('failureType', activity('Failed Lookup').error.failureType)",
 									"type": "Expression"
 								}
 							},

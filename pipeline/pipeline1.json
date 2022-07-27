@@ -179,14 +179,14 @@
 							"activityname": {
 								"type": "String",
 								"value": {
-									"value": "@activity('Failed Lookup').output.firstRow.Name",
+									"value": "@activity('Failed Lookup').output.DurationInQueue",
 									"type": "Expression"
 								}
 							},
 							"activitytype": {
 								"type": "String",
 								"value": {
-									"value": "@activity('Failed Lookup').output.firstRow.Name",
+									"value": "@activity('Failed Lookup').output.DurationInQueue",
 									"type": "Expression"
 								}
 							},

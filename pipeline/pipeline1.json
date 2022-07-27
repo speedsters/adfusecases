@@ -179,35 +179,35 @@
 							"activityname": {
 								"type": "String",
 								"value": {
-									"value": "@activity('Lookup1').output.durationInQueue",
+									"value": "@activity('Failed Lookup').output.durationInQueue",
 									"type": "Expression"
 								}
 							},
 							"activitytype": {
 								"type": "String",
 								"value": {
-									"value": "@activity('Lookup1').output.durationInQueue",
+									"value": "@activity('Failed Lookup').output.durationInQueue",
 									"type": "Expression"
 								}
 							},
 							"errorcode": {
 								"type": "String",
 								"value": {
-									"value": "@activity('Lookup1').error.ErrorCode",
+									"value": "@activity('Failed Lookup').error.ErrorCode",
 									"type": "Expression"
 								}
 							},
 							"errormessage": {
 								"type": "String",
 								"value": {
-									"value": "@activity('Lookup1').error.Message",
+									"value": "@activity('Failed Lookup').error.Message",
 									"type": "Expression"
 								}
 							},
 							"failuretype": {
 								"type": "String",
 								"value": {
-									"value": "@concat(activity('Lookup1').error.message, 'failureType', activity('Lookup1').error.failureType)",
+									"value": "@concat(activity('Failed Lookup').error.message, 'failureType', activity('Failed Lookup').error.failureType)",
 									"type": "Expression"
 								}
 							},
@@ -221,7 +221,7 @@
 							"sno": {
 								"type": "Int32",
 								"value": {
-									"value": "@activity('Lookup2').output.firstRow.maxno",
+									"value": "@activity('Get Id').output.firstRow.maxno",
 									"type": "Expression"
 								}
 							}

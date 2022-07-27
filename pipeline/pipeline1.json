@@ -256,7 +256,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"source": {
-						"type": "AzureSqlSource",
+						"type": "DelimitedTextSource",
 						"additionalColumns": [
 							{
 								"name": "ErrorMessgae",
@@ -266,8 +266,14 @@
 								}
 							}
 						],
-						"queryTimeout": "02:00:00",
-						"partitionOption": "None"
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
 					},
 					"sink": {
 						"type": "DelimitedTextSink",
@@ -286,156 +292,13 @@
 						"mappings": [
 							{
 								"source": {
-									"name": "Prop_0",
-									"type": "String",
-									"physicalType": "nvarchar"
+									"name": "ErrorMessgae",
+									"type": "String"
 								},
 								"sink": {
 									"type": "String",
 									"physicalType": "String",
 									"ordinal": 1
-								}
-							},
-							{
-								"source": {
-									"name": "Prop_1",
-									"type": "String",
-									"physicalType": "nvarchar"
-								},
-								"sink": {
-									"type": "String",
-									"physicalType": "String",
-									"ordinal": 2
-								}
-							},
-							{
-								"source": {
-									"name": "Prop_2",
-									"type": "String",
-									"physicalType": "nvarchar"
-								},
-								"sink": {
-									"type": "String",
-									"physicalType": "String",
-									"ordinal": 3
-								}
-							},
-							{
-								"source": {
-									"name": "Prop_3",
-									"type": "String",
-									"physicalType": "nvarchar"
-								},
-								"sink": {
-									"type": "String",
-									"physicalType": "String",
-									"ordinal": 4
-								}
-							},
-							{
-								"source": {
-									"name": "Prop_4",
-									"type": "String",
-									"physicalType": "nvarchar"
-								},
-								"sink": {
-									"type": "String",
-									"physicalType": "String",
-									"ordinal": 5
-								}
-							},
-							{
-								"source": {
-									"name": "Prop_5",
-									"type": "String",
-									"physicalType": "nvarchar"
-								},
-								"sink": {
-									"type": "String",
-									"physicalType": "String",
-									"ordinal": 6
-								}
-							},
-							{
-								"source": {
-									"name": "Prop_6",
-									"type": "String",
-									"physicalType": "nvarchar"
-								},
-								"sink": {
-									"type": "String",
-									"physicalType": "String",
-									"ordinal": 7
-								}
-							},
-							{
-								"source": {
-									"name": "Prop_7",
-									"type": "String",
-									"physicalType": "nvarchar"
-								},
-								"sink": {
-									"type": "String",
-									"physicalType": "String",
-									"ordinal": 8
-								}
-							},
-							{
-								"source": {
-									"name": "Prop_8",
-									"type": "String",
-									"physicalType": "nvarchar"
-								},
-								"sink": {
-									"type": "String",
-									"physicalType": "String",
-									"ordinal": 9
-								}
-							},
-							{
-								"source": {
-									"name": "Prop_9",
-									"type": "String",
-									"physicalType": "nvarchar"
-								},
-								"sink": {
-									"type": "String",
-									"physicalType": "String",
-									"ordinal": 10
-								}
-							},
-							{
-								"source": {
-									"name": "Prop_10",
-									"type": "String",
-									"physicalType": "nvarchar"
-								},
-								"sink": {
-									"type": "String",
-									"physicalType": "String",
-									"ordinal": 11
-								}
-							},
-							{
-								"source": {
-									"name": "Prop_11",
-									"type": "String",
-									"physicalType": "nvarchar"
-								},
-								"sink": {
-									"type": "String",
-									"physicalType": "String",
-									"ordinal": 12
-								}
-							},
-							{
-								"source": {
-									"name": "ErrorMessgae"
-								},
-								"sink": {
-									"type": "String",
-									"physicalType": "String",
-									"ordinal": 13
 								}
 							}
 						],
@@ -448,7 +311,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "AzureSqlTable1",
+						"referenceName": "DelimitedText2",
 						"type": "DatasetReference"
 					}
 				],

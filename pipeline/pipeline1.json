@@ -179,14 +179,14 @@
 							"activityname": {
 								"type": "String",
 								"value": {
-									"value": "@activity('Lookup1').output.value",
+									"value": "@activity('Lookup1').output.durationInQueue",
 									"type": "Expression"
 								}
 							},
 							"activitytype": {
 								"type": "String",
 								"value": {
-									"value": "@activity('Lookup1').output.value",
+									"value": "@activity('Lookup1').output.durationInQueue",
 									"type": "Expression"
 								}
 							},

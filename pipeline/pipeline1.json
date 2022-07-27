@@ -193,21 +193,21 @@
 							"errorcode": {
 								"type": "String",
 								"value": {
-									"value": "@variables('ErrorCode')",
+									"value": "@activity('Lookup1').error.ErrorCode",
 									"type": "Expression"
 								}
 							},
 							"errormessage": {
 								"type": "String",
 								"value": {
-									"value": "@variables('ErrorDetails')",
+									"value": "@activity('Lookup1').error.Message",
 									"type": "Expression"
 								}
 							},
 							"failuretype": {
 								"type": "String",
 								"value": {
-									"value": "@variables('ErrorCode')",
+									"value": "@concat(activity('Lookup1').error.message, 'failureType', activity('Lookup1').error.failureType)",
 									"type": "Expression"
 								}
 							},

@@ -90,7 +90,7 @@
 				}
 			},
 			{
-				"name": "Get Metadata1",
+				"name": "Get Metadata",
 				"type": "GetMetadata",
 				"dependsOn": [
 					{

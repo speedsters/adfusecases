@@ -111,7 +111,7 @@
 				}
 			},
 			{
-				"name": "Lookup2",
+				"name": "Get Id",
 				"type": "Lookup",
 				"dependsOn": [
 					{
@@ -147,7 +147,7 @@
 				"type": "Lookup",
 				"dependsOn": [
 					{
-						"activity": "Lookup2",
+						"activity": "Get Id",
 						"dependencyConditions": [
 							"Succeeded"
 						]

@@ -182,7 +182,7 @@
 							"activitytype": {
 								"type": "String",
 								"value": {
-									"value": "@activity('Lookup2').outputvariables('activityType')",
+									"value": "@activity('Lookup1').output.value",
 									"type": "Expression"
 								}
 							},

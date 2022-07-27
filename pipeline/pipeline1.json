@@ -121,33 +121,13 @@
 				}
 			},
 			{
-				"name": "Set variable1",
-				"type": "SetVariable",
+				"name": "Lookup2",
+				"type": "Lookup",
 				"dependsOn": [
 					{
 						"activity": "Lookup1",
 						"dependencyConditions": [
 							"Failed"
-						]
-					}
-				],
-				"userProperties": [],
-				"typeProperties": {
-					"variableName": "ErrorArray",
-					"value": {
-						"value": "@activity('Lookup1').Error.Message",
-						"type": "Expression"
-					}
-				}
-			},
-			{
-				"name": "Lookup2",
-				"type": "Lookup",
-				"dependsOn": [
-					{
-						"activity": "Set variable1",
-						"dependencyConditions": [
-							"Succeeded"
 						]
 					}
 				],
@@ -162,7 +142,7 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
-						"sqlReaderQuery": "select isnull(max(sno),0),max(sno)+1 as maxno from t_adf_errorlog",
+						"sqlReaderQuery": "select max(sno)+1 as maxno from t_adf_errorlog",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},

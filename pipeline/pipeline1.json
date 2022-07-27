@@ -177,7 +177,11 @@
 						"sqlReaderStoredProcedureName": "[dbo].[usp_insertlogdetails]",
 						"storedProcedureParameters": {
 							"activityname": {
-								"type": "String"
+								"type": "String",
+								"value": {
+									"value": "@activity('Lookup1').output.value",
+									"type": "Expression"
+								}
 							},
 							"activitytype": {
 								"type": "String",

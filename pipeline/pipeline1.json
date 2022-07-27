@@ -57,7 +57,7 @@
 				]
 			},
 			{
-				"name": "Lookup1",
+				"name": "Failed Lookup",
 				"type": "Lookup",
 				"dependsOn": [
 					{
@@ -76,6 +76,16 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
+					"source": {
+						"type": "AzureSqlSource",
+						"sqlReaderQuery": "Select * from NoTable",
+						"queryTimeout": "02:00:00",
+						"partitionOption": "None"
+					},
+					"dataset": {
+						"referenceName": "AzureSqlTable1",
+						"type": "DatasetReference"
+					},
 					"firstRowOnly": false
 				}
 			},
@@ -84,7 +94,7 @@
 				"type": "GetMetadata",
 				"dependsOn": [
 					{
-						"activity": "Lookup1",
+						"activity": "Failed Lookup",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -115,7 +125,7 @@
 				"type": "Lookup",
 				"dependsOn": [
 					{
-						"activity": "Lookup1",
+						"activity": "Failed Lookup",
 						"dependencyConditions": [
 							"Failed"
 						]
